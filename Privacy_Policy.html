@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Acro Scan</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #5CBDF4;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-top: 30px;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight-box {
+            background-color: #e8f4fd;
+            border-left: 5px solid #5CBDF4;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .new-section {
+            background-color: #fff9e6;
+            border-left: 5px solid #ffa500;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        a {
+            color: #5CBDF4;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .last-updated {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Privacy Policy</h1>
+    <span class="last-updated">Last Updated: February 4, 2026</span>
+
+    <p>This Privacy Policy ("Policy") constitutes a binding legal agreement between you ("User," "You," or "Your") and <strong>Aelvra</strong> ("Developer," "We," "Us," or "Our"), the developer and operator of the mobile application <strong>Acro Scan</strong> ("the Application" or "Service").</p>
+
+    <p>We are committed to maintaining the confidentiality, integrity, and security of your personal information. This Policy outlines our practices regarding the collection, use, and disclosure of information when you use our Application. By accessing or using the Application, you agree to the terms of this Privacy Policy.</p>
+
+    <div class="highlight-box">
+        <strong>Data Sovereignty & Storage Architecture:</strong><br>
+        Acro Scan operates on a strict "Local-First" architecture. <strong>Aelvra</strong> does not own, operate, or maintain external cloud servers for the storage of your documents. All data generated, scanned, or processed by the Application resides exclusively in two locations:
+        <ol>
+            <li><strong>Local Device Storage:</strong> The internal memory of your mobile device.</li>
+            <li><strong>Your Personal Google Drive™:</strong> Only if you explicitly authenticate and enable cloud synchronization features.</li>
+        </ol>
+    </div>
+
+    <h2>1. Information Collection and Device Permissions</h2>
+    <p>To facilitate the core functionality of the Application, we require access to specific hardware and software features on your device. We do not collect this data for marketing, tracking, or advertising purposes.</p>
+
+    <ul>
+        <li><strong>Camera Access:</strong> The Application requires permission to access your device's camera sensor strictly for capturing images of documents. This data is processed locally in real-time and stored only on your device.</li>
+        
+        <li><strong>Storage Access (Read/Write):</strong> The Application requires access to your device's storage to:
+            <ul>
+                <li>Save scanned documents in multiple formats (images, PDFs, and proprietary .acro archive files)</li>
+                <li>Import existing images for editing and document creation</li>
+                <li>Create and manage a local database of your scans using SQLite</li>
+                <li>Store user preferences (such as theme settings and camera modes)</li>
+            </ul>
+        </li>
+        <li><strong>Device Orientation Access:</strong> The Application uses device orientation sensors to automatically detect and adjust document orientation during scanning for optimal capture and processing.</li>
+        <li><strong>Internet Access:</strong> The Application requires internet permission <strong>exclusively</strong> for:
+            <ul>
+                <li>Google Drive API authentication and file synchronization</li>
+                <li>No other network activity, analytics, advertising, or data transmission occurs</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>2. Data Processing and Local Operations</h2>
+    <p>All document processing occurs locally on your device. The Application performs the following operations entirely offline:</p>
+
+    <div class="new-section">
+        <strong>Local Processing Activities:</strong>
+        <ul>
+            <li><strong>Image Processing:</strong> Cropping, rotation, filtering, and enhancement of scanned images</li>
+            <li><strong>PDF Generation:</strong> Conversion of images to PDF format using the local PDF library</li>
+            <li><strong>Archive Creation:</strong> Packaging of multiple images into proprietary .acro format (compressed archive with metadata)</li>
+            <li><strong>Database Storage:</strong> Maintaining a local SQLite database of your scans, metadata, and organization</li>
+            <li><strong>Preference Storage:</strong> Saving your app settings (theme, camera mode) using SharedPreferences</li>
+            <li><strong>Image Sharing:</strong> Preparing documents for sharing with other apps on your device</li>
+        </ul>
+        <p><strong>Important:</strong> None of these operations transmit data outside your device unless you explicitly choose to sync with Google Drive or share files with other apps.</p>
+    </div>
+
+    <h2>3. Use of Personal Data and Content</h2>
+    <p>Your content is yours. Our use of data is strictly limited to providing the utility of the Application:</p>
+    <ul>
+        <li><strong>Document Content:</strong> We do not have access to, nor do we view, analyze, or process the contents of your scanned documents on our servers, as we do not maintain such servers.</li>
+        
+        <li><strong>Google Sign-In Data:</strong> If you choose to link your Google Drive, we use Google Sign-In solely to authenticate your identity. Authentication tokens are stored securely on your device using encrypted storage (FlutterSecureStorage/Android Keystore) and are used only to facilitate direct communication between your device and Google's servers.</li>
+        
+        <li><strong>Application Logs:</strong> The Application maintains local diagnostic logs for debugging and error tracking purposes. These logs may include:
+            <ul>
+                <li>Application lifecycle events (start, stop, errors)</li>
+                <li>Cloud sync operation status (success/failure, without document content)</li>
+                <li>Camera initialization events</li>
+                <li>File operation timestamps</li>
+            </ul>
+            These logs are stored locally on your device and are never transmitted to external servers or third parties.
+        </li>
+    </ul>
+
+    <h2>4. Cloud Synchronization and Google Drive™</h2>
+    <p>The Application integrates with the Google Drive API to provide optional backup and synchronization services. By enabling this feature, you acknowledge and agree to the following:</p>
+
+    <ul>
+        <li><strong>Direct Transfer:</strong> Files are transferred directly from your device to your personal Google Drive via encrypted protocols (HTTPS/TLS). <strong>Aelvra</strong> does not intercept, store, or have access to these files.</li>
+        
+        <li><strong>Folder Structure:</strong> The Application creates a dedicated "Acro" folder in your Google Drive. Within this folder:
+            <ul>
+                <li>Each scan is stored as a separate subfolder</li>
+                <li>Images are uploaded with sequential naming (Acro_Scan_1, Acro_Scan_2, etc.)</li>
+                <li>Incremental sync uploads only new images to avoid duplication</li>
+            </ul>
+        </li>
+        
+        <li><strong>Limited Use Disclosure:</strong> The Application's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements.</li>
+        
+        <li><strong>Google Privacy Policy:</strong> Data stored in Google Drive is subject to Google's Privacy Policy and Terms of Service. We encourage you to review them here: <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.</li>
+        
+        <li><strong>Two-Way Sync:</strong> If you rename folders in the Application, these changes may be reflected in your Google Drive folder structure.</li>
+    </ul>
+
+    <h2>5. Third-Party Services and Libraries</h2>
+    <p>The Application utilizes trusted open-source libraries and third-party frameworks to ensure stability, performance, and functionality. These components operate locally on your device and do not transmit your personal data or document content to external parties:</p>
+
+    <div class="new-section">
+        <strong>Third-Party Components:</strong>
+        <ul>
+            <li><strong>Google Sign-In SDK:</strong> For secure OAuth authentication with Google Drive</li>
+            <li><strong>Image Processing Libraries:</strong> For cropping, filtering, and enhancing scanned images (processed locally)</li>
+            <li><strong>PDF Generation Library:</strong> For converting images to PDF format (processed locally)</li>
+            <li><strong>Share Plus:</strong> For sharing documents with other apps on your device</li>
+            <li><strong>SQLite Database:</strong> For local storage of scan metadata and organization</li>
+            <li><strong>Archive Library:</strong> For creating compressed .acro archive files (processed locally)</li>
+        </ul>
+        <p><strong>Note:</strong> Image cropping functionality may use platform-specific native libraries. All processing remains on your device.</p>
+    </div>
+
+    <h2>6. Data Security Measures</h2>
+    <p>We implement robust security standards to protect your data locally:</p>
+    <ul>
+        <li><strong>Secure Credential Storage:</strong> Sensitive credentials (such as OAuth tokens for Google Drive) are stored using platform-native secure storage mechanisms:
+            <ul>
+                <li>Android: FlutterSecureStorage with Android Keystore</li>
+                <li>iOS: Keychain Services</li>
+            </ul>
+        </li>
+        
+        <li><strong>Encryption in Transit:</strong> All network requests made by the Application to Google Drive are encrypted using SSL/TLS protocols (HTTPS).</li>
+        
+        <li><strong>Local Data Protection:</strong> Documents stored on your device are protected by your device's security features (device encryption, screen lock, etc.).</li>
+        
+        <li><strong>No Analytics or Tracking:</strong> The Application does not use any third-party analytics, crash reporting, or tracking services that would transmit your data externally.</li>
+    </ul>
+    
+    <p>While we strive to use commercially acceptable means to protect your data, no method of transmission over the internet or method of electronic storage is 100% secure. You are responsible for maintaining the security of your device and Google account credentials.</p>
+
+    <h2>7. Data Sharing and Disclosure</h2>
+    <p>We do not share, sell, rent, or trade your personal information or document content with third parties. The only data sharing that occurs is:</p>
+    <ul>
+        <li><strong>User-Initiated Sharing:</strong> When you explicitly use the "Share" feature to send documents to other apps on your device</li>
+        <li><strong>Google Drive Sync:</strong> When you enable cloud synchronization and files are transferred to your personal Google Drive account</li>
+        <li><strong>Legal Compliance:</strong> If required by law or to protect our rights, we may disclose information in response to lawful requests by public authorities</li>
+    </ul>
+
+    <h2>8. Data Retention and Deletion</h2>
+    <p>You have complete control over your data:</p>
+    <ul>
+        <li><strong>Local Data:</strong> All scans and documents remain on your device until you explicitly delete them from the Application</li>
+        <li><strong>Cloud Data:</strong> Files in Google Drive remain until you delete them from your Drive account</li>
+        <li><strong>Account Disconnection:</strong> Disconnecting Google Drive removes authentication tokens from your device but does not delete files already stored in your Drive</li>
+        <li><strong>App Uninstallation:</strong> Uninstalling the Application will remove all local data from your device. Cloud data in Google Drive will remain accessible through your Google account</li>
+    </ul>
+
+    <h2>9. Children's Privacy</h2>
+    <p>Our Application is not directed to individuals under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have inadvertently collected personal data from a child under 13, we will take steps to delete such information promptly. If you are a parent or guardian and believe your child has provided us with personal information, please contact us.</p>
+
+    <h2>10. International Data Transfers</h2>
+    <p>If you enable Google Drive synchronization, your data may be transferred to and stored in Google's data centers, which may be located in countries outside your residence. Google's data practices are governed by their Privacy Policy and comply with applicable data protection regulations.</p>
+
+    <h2>11. Your Rights and Choices</h2>
+    <p>Depending on your jurisdiction, you may have the following rights:</p>
+    <ul>
+        <li><strong>Access:</strong> View and export all your scans and documents at any time</li>
+        <li><strong>Deletion:</strong> Delete individual scans or all data from the Application</li>
+        <li><strong>Portability:</strong> Export your documents in standard formats (PDF, images, .acro archives)</li>
+        <li><strong>Cloud Control:</strong> Enable or disable Google Drive synchronization at any time</li>
+        <li><strong>Revoke Permissions:</strong> Revoke camera or storage permissions through your device settings (this may limit Application functionality)</li>
+    </ul>
+
+    <h2>12. Amendments to this Policy</h2>
+    <p><strong>Aelvra</strong> reserves the right to modify or replace this Privacy Policy at any time. Material changes will be effective immediately upon posting the updated policy in the Application. We will update the "Last Updated" date at the top of this Policy. It is your responsibility to review this Privacy Policy periodically for changes. Your continued use of the Application after changes are posted constitutes acceptance of the updated Policy.</p>
+
+    <h2>13. Contact Information</h2>
+    <p>If you have questions regarding this Privacy Policy, our data practices, or wish to exercise your privacy rights, please contact the developer directly:</p>
+    
+    <p>
+        <strong>Developer:</strong> Aelvra<br>
+        <strong>Email:</strong> <a href="mailto:contact.aelvra@gmail.com">contact.aelvra@gmail.com</a>
+    </p>
+
+    <h2>14. Governing Law and Dispute Resolution</h2>
+    <p>This Privacy Policy shall be governed by and construed in accordance with applicable data protection laws. Any disputes arising from this Policy or your use of the Application shall be resolved through good faith negotiation. If resolution cannot be achieved, disputes shall be subject to the jurisdiction of the courts in your country of residence.</p>
+
+    <div class="highlight-box">
+        <strong>Summary of Our Privacy Commitment:</strong><br>
+        <ul>
+            <li>✓ All processing happens locally on your device</li>
+            <li>✓ No external servers owned or operated by Aelvra</li>
+            <li>✓ No analytics, tracking, or advertising services</li>
+            <li>✓ Google Drive sync is optional and under your control</li>
+            <li>✓ Complete data ownership and control</li>
+            <li>✓ Transparent about all permissions and their purposes</li>
+        </ul>
+    </div>
+</div>
+
+<div class="footer">
+    &copy; 2026 Aelvra. All rights reserved.<br>
+    Acro Scan - Privacy-First Document Scanning
+</div>
+
+</body>
+</html>
